@@ -1,0 +1,391 @@
+<html lang=en>
+<head>
+	<meta charset=utf-8>
+	<meta name=google-site-verification: google27a0d49d92a17274.html>
+	<meta name=description content="Docteur en mathématiques et informatique, spécialisé dans la théorie des graphes" />
+	<title>Tianjiao Dai</title>
+	<link rel=icon href=logo.ico type=image/x-icon>
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	<script type=text/x-mathjax-config> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}}); </script>
+	<style>
+		.talk { width:100%; text-align:justify }
+		.profil { max-width:70%; border-collapse:collapse; hyphens:auto }
+		.date { width:10em }
+		.title { cursor:pointer; padding: 0 20px; text-align:center}
+		.title:hover { background:rgb(200,200,210) }
+		.link { color: rgb(100,30,120); cursor:pointer; text-align:center}
+		.link:hover { background:rgb(200,200,210); text-decoration:underline }
+		span { white-space:nowrap }
+		div { position:relative; width:100% }
+		div.image { position:absolute; right:0; height:100%; width:30% }
+		img { max-height:100%; max-width:100%; position:absolute; right:0 }
+		h3 { margin-bottom:2px }
+		h2 { margin-top:10px; margin-bottom:10px }
+		h1 { padding:5px }
+		summary { cursor: pointer; font-style:italic }
+		body { font-family: 'EB Garamond'; font-size: 13pt; background: rgb(245,245,250); margin-left:4%; margin-right:4% }
+		a { color: rgb(100,30,120); text-decoration:none }
+		a:hover { text-decoration:underline } 
+		p { margin-top:0; text-align:justify}
+	</style>
+	<script>
+		current_id = "publi";
+		function show(id) {
+			document.getElementById("title_"+current_id).style.background="";
+			document.getElementById(current_id).style.display='none';
+			document.getElementById(id).style.display = '';
+			document.getElementById("title_"+id).style.background="rgb(200,200,210)";
+			current_id=id;
+		}
+		
+		function adresse(prenom,nom,labo) {
+			document.write("<a href="+"ma"+"ilto:"+prenom+"."+nom+"@"+labo+".fr>"+prenom+"."+nom+"@"+labo+".fr</a>")
+		}
+		
+		function author(name,url) {
+			this.name = name;
+			this.url = url;
+		}
+		
+		var coauthors = {
+			"chuet" : new author("Quentin Chuet","https://www.quentinchuet.com/"),
+			"dai" : new author("Tianjiao Dai","https://www.lri.fr/membre.php?mb=2729"),
+			"hu" : new author("Jie Hu","http://cfc.nankai.edu.cn/hj/main.htm"),
+			"li" : new author("Hao Li","https://www.lri.fr/~li/"),
+			"maezawa" : new author("Shun-ichi Maezawa","https://www.tus.ac.jp/ridai/doc/ji/RIJIA01Detail.php?act=pos&kin=ken&diu=766c&pri=en"),
+			"ma" : new author("Yue Ma","https://www.lri.fr/~ma/"),
+			"ouyang" : new author("Qiancheng Ouyang","https://www.lri.fr/membre.php?mb=2722"),
+			"pirot" : new author("François Pirot","https://www.lri.fr/~fpirot/"),
+			"sereni" : new author("Jean-Sébastien Sereni","http://lbgi.fr/~sereni/"),
+			"tian" : new author("Zengxian Tian","https://math.cuit.edu.cn/"),
+			"wang" : new author("Guanghui Wang","https://faculty.sdu.edu.cn/wangguanghui1/zh_CN/index.htm"),
+        "yang" : new author("Donglei Yang","https://faculty.sdu.edu.cn/yangdonglei/zh_CN/index.htm"),  
+        "yannis" : new author("Yannis Manoussakis","https://www.ins2i.cnrs.fr/fr/personne/yannis-manoussakis"),
+        "yu" : new author("Gexin Yu","https://gyu.people.wm.edu/"),
+		}
+		
+		function ref(name) {
+			const x = coauthors[name];
+			document.write("<a href="+x.url+" target=_blank>"+x.name+"</a>");		
+		}
+		
+		function cite() {
+			const n = arguments.length;
+			if (n==1) {
+				ref(arguments[0]);
+			} else if (n == 2) {
+				ref(arguments[0]); 
+				document.write(" and ");
+				ref(arguments[1]);
+			} else {
+				for (let i = 0; i<= n-2; i++) {
+					ref(arguments[i]);
+					document.write(", ");
+				}
+				document.write("and ");
+				ref(arguments[n-1])
+			}
+		}
+	</script>
+</head>
+
+
+
+<body>
+<div align=center style="background:rgb(200,200,210)">
+<h1>Tianjiao Dai</h1>
+</div>
+
+<div>
+<div class=image>
+<img src=profil.jpg>
+</div>
+
+<table class=profil border=1 cellpadding=7>
+  <tr align=left>
+    <th>Institutions</th>
+    <td colspan=6><a href=https://www.lisn.upsaclay.fr/ target=_blank>LISN</a> (ex <a href=https://www.lri.fr/ target=_blank>LRI</a>)</td>
+  </tr>
+  <tr align=left>
+    <th>Status</th>
+    <td colspan=6>PhD student
+		</td>
+  </tr>
+  <tr align=left>
+    <th>Location</th>
+    <td colspan=6>Equipe <a href=https://galac.lri.fr/fr/ target=_blank>GALaC</a>, bâtiment 650 (PCRI), bureau 241	</td>
+  </tr>
+  <tr align=left>
+    <th>Email</th>
+    <td colspan=6><script>adresse("tianjiao","dai","lisn");</script>
+    </td>
+  </tr>
+  <tr align=left>
+    <th>Links</th>
+    <td class=link onclick=window.open("CV_English_Tianjiao.pdf")>CV</td>
+    <td class=link onclick=window.open("cv/cv-francais.pdf")>CV_chinoise</td>
+	<tr>
+		<th align=left> Interests </th>
+		<td colspan=6> Graph Theory, Combinatorics, Probabilistic Method </td>
+	</tr>
+</table>
+</div><br>
+
+<h2>About me</h2>
+
+<p>
+I have obtained the degree of doctor in Computer Science and Mathematics from the Université Paris-Saclay on 17/10/2023. My PhD has been supervised by <a href=https://www.lri.fr/~li/>Hao Li </a> and <a href=https://www.lri.fr/~fpirot/>François Pirot</a>, and my thesis topic is “Some vertex colouring problems and a generalisation of Hamilton-connectivity in graphs”. 
+</p>
+
+<p>
+  From September 2019 to December 2023, I am doing my research at the <a href=https://www.lisn.upsaclay.fr/ target=_blank>LISN</a> in the team
+<a href=https://galac.lri.fr/fr/ target=_blank>GALaC</a>. 
+</p>
+
+<p>
+My main research activities focus on the colouring problem by using probabilistic method. I also do some research on Hamilton-connection problems.
+</p>
+
+<center>
+<table>
+<tr>
+<td id=title_publi class=title style="background:rgb(200,200,210)" align=center onclick="show('publi')">
+	<h2>Research</h2>
+</td>
+<td id=title_conf class=title align=center onclick="show('conf')">
+	<h2>Talks</h2>
+</td>
+<td id=title_other class=title align=center onclick="show('other')">
+	<h2>Others</h2>
+</td>
+</tr>
+</table>
+</center>
+
+
+<div id='publi'>
+	<h2> Preprints </h2>
+	<ul>
+		<li>
+			<h3>New bounds for odd colourings of graphs</h3>
+			with <script>cite("ouyang","pirot")</script>.
+			<br> <a href=http://arxiv.org/abs/2306.01341 target=_blank>arXiv:2306.01341</a>.
+			<details>
+			<summary>Abstract</summary>
+			<div class=talk>
+			Given a graph $G$, a vertex-colouring $\sigma$ of $G$, and a subset $X\subseteq V(G)$, a colour $x \in \sigma(X)$
+			is said to be <i>odd</i> for $X$ in $\sigma$ if it has an odd number of occurrences in $X$. We say that $\sigma$
+			is an <i>odd colouring</i> of $G$ if it is proper and every (open) neighbourhood has an odd colour in $\sigma$.
+			The odd chromatic number of a graph $G$, denoted by $\chi_o(G)$, is the minimum $k\in\mathbb{N}$ such that an 
+			odd colouring $\sigma \colon V(G)\to [k]$ exists. In a recent paper, Caro, Petruševski and Škrekovski
+			conjectured that every connected graph of maximum degree $\Delta\ge 3$ has odd-chromatic number at most $\Delta+1$.
+			We prove that this conjecture holds asymptotically: for every connected graph $G$ with maximum degree $\Delta$,
+			$\chi_o(G)\le\Delta+O(\ln\Delta)$ as $\Delta \to \infty$. We also prove that $\chi_o(G)\le\lfloor3\Delta/2\rfloor+2$
+			for every $\Delta$. If moreover the minimum degree $\delta$ of $G$ is sufficiently large, we have
+			$\chi_o(G) \le \chi(G) + O(\Delta \ln \Delta/\delta)$ and $\chi_o(G) = O(\chi(G)\ln \Delta)$.
+			Finally, given an integer $h\ge 1$, we study the generalisation of these results to $h$-odd colourings,
+			where every vertex $v$ must have at least $\min \{°(v),h\}$ odd colours in its neighbourhood.
+			Many of our results are tight up to some multiplicative constant. 
+			</div>
+			</details>
+	
+		<li>
+			<h3>On DP-coloring of outerplanar graphs</h3>
+			with <script>cite("hu","li","maezawa")</script>.
+			<details>
+			<summary>Abstract</summary>
+			<div class=talk>
+			We extend the bound of list colouring on $2$-connected bipartite outerplanar graphs to DP-colouring. The notion of DP-colouring was introduced by Dvo\v{r}\'{a}k and Postle, which is a generalisation of list colouring. A DP-colouring of a graph $G$ reduces the problem of finding a proper colouring of $G$ from a given list $L$ to the problem of finding a "large" independent set in an auxiliary graph. Hutchinson showed that if a $2$-connected bipartite outerplanar graph $G$ has a list of colors
+$L(v)$ for each vertex $v$ with $|L(v)|\geq\min\{\deg_G(v),4\}$, then $G$ is $L$-colorable; and if a maximal outerplanar graph $G$ with at least four vertices has a list of colors
+$L(v)$ for each vertex $v$ with $|L(v)|\geq\min\{\deg_G(v),5\}$, then $G$ is $L$-colorable.
+
+We study whether the bounds of Hutchinson's results hold for DP-colouring.
+We obtain that the first one is not sufficient for DP-colouring, while the second one is sufficient. Moreover, it is the best result for $2$-connected bipartite outerplanar graphs. In fact, we solve all the $2$-connected outerplanar graphs. 
+			</div>
+			</details>
+		
+	
+		
+		
+	
+		<li>
+			<h3>Properly colored cycles in edge-colored complete graphs</h3>
+			with <script>cite("li","yannis","ouyang")</script>.
+			<details>
+			<summary>Abstract</summary>
+			<div class=talk>
+			As an analogy of the well-known anti-Ramsey problem, we study the existence of properly coloured cycles of given length in an edge-colored complete   graph. Let $\rm pr(K_n,G)$ be the maximum number of colours in an edge-colouring of $K_n$ with no properly coloured copy of $G$. In this paper, we determine the exact threshold for cycles $\rm pr(K_n,C_l)$, which proves a conjecture proposed by Fang, Gy\H{o}ri, and Xiao, that the maximum number of colours in an edge-colouring of $K_n$ with no properly coloured copy of $C_l$ is $\max\left\{\binom{l-1}{2}+n-l+1,\left\lfloor\frac{l-1}{3}\right\rfloor n-\binom{\lfloor\frac{l-1}{3}\rfloor+1}{2}+1+r_{l-1}\right\},$ where $C_l$ is a cycle on $l$ vertices, $l-1\equiv r_{l-1}\mod 3$, and $0\leq r_{l-1}\leq 2$. It is a slight modification of a previous conjecture posed by Manoussakis, Spyratos, Tuza and Voigt. Also, we consider the maximal colouring of $K_n$ whether a properly coloured cycle can be extended by exact one more vertex.
+			</div>
+			</details>
+		
+		
+
+	</ul>
+	
+	
+	<h2> Conference papers </h2>
+			
+		<ul>	
+		
+		<li>
+			<h3>A Hypergraph Approach for Logic-based Abduction</h3>
+			with <script>cite("ouyang","ma")</script>.
+			<br><a href=https://www.iaria.org/conferences2023/DBKDA23.html>DBKDA 2023</a>,
+			In 15th International Conference on Advances in Databases, Knowledge, and Data Applications, Barcelona, Spain, 2023, p. 24-26.
+			<details>
+			<summary>Abstract</summary>
+			<div class=talk>
+			Abduction reasoning, which finds possible hypotheses from existing observations, has been studied in many different areas. We consider an abduction problem that takes into account a user's interest. We propose a new approach to solving such an abduction problem based on a hypergraph representation of an ontology and obtain a linear algorithm for a description logic.
+			</div>
+			</details>
+
+		
+	</ul>	
+	
+	<h2> Journal papers </h2>
+	<ul>
+		<li>
+			<h3>On $(2,k)$-Hamilton-connected graphs</h3>
+			with <script>cite("li","ouyang","tian")</script>.
+                        <br> <a href=https://www.sciencedirect.com/science/article/abs/pii/S0166218X23004298>Discrete Applied Mathematics</a>, 2024, vol. 343, p. 	288-299.
+			<details>
+			<summary>Abstract</summary>  
+			<div class=talk>
+			A graph $G$ is called $(k_1,k_2)$-Hamilton-connected, if for any two disjoint vertex subsets $X=\{x_1,x_2,\ldots,x_{k_1}\}$ and $U=\{u_1,u_2,\ldots,u_{k_2}\}$, there are $k_1k_2$ internally disjoint paths connecting $x_i$ to $u_j$ for $1\leq i\leq k_1$ and $1\leq j\leq k_2$, which span the whole graph. Let $\sigma_2(G)$ be the minimum value of $deg(u)+deg(v)$ over all pairs $\{u, v\}$ of non-adjacent vertices in $G$. We prove that an $n$-vertex graph $G$ is $(2,k)$-Hamilton-connected if $G$ is $(5k-4)$-connected with $\sigma_2(G)\geq n+k-2$ where $k\geq 2$. We also prove that if $\sigma_2(G)\geq n+k_1k_2-2$ with $k_1,k_2\geq 2$,
+then $G$ is $(k_1,k_2)$-Hamilton-connected. Moreover, these bounds of the two results are sharp. 
+			</div>
+			</details>
+
+               <li>
+			<h3>Strong list-chromatic index of subcubic graphs.</h3>
+				with <script>cite("wang", "yang", "yu")</script>.
+				<br> <a href=https://arxiv.org/pdf/1809.01805.pdf>Discrete Mathematics</a>, 2018, vol. 341, p. 	3434-3440.
+			<details>
+			<summary>Abstract</summary>
+			<div class=talk>
+			A strong $k$-edge-colouring of a graph $G$ is an edge-colouring with $k$ colours in which every colour class is an induced matching. The strong chromatic index of $G$, denoted by $\chi'_{s}(G)$, is the minimum $k$ for which $G$ has a strong $k$-edge-coloring.
+ In 1985, Erd\H{o}s and Ne\v{s}et\v{r}il conjectured that $\chi'_{s}(G)\leq\frac{5}{4}\Delta(G)^2$, where $\Delta(G)$ is the maximum degree of $G$. When $G$ is a graph with maximum degree at most $3$, the conjecture was verified independently by Andersen and Hor\'{a}k, Qing, and Trotter. In this paper, we consider the list version of strong edge-colouring. In particular, we show that every subcubic graph has strong list-chromatic index at most $11$ and every planar subcubic graph has strong list-chromatic index at most $10$.
+			</div>
+			</details>
+			
+		
+	
+	</ul>
+	
+</div>
+
+
+
+
+
+<div id='conf' style="display:none">
+	<ul>
+
+               <li>
+			<table class=talk>
+			<tr>
+				<td class=date> $5$ October $2023$</td>
+				<th> <a href=https://galac.lri.fr/tag/team-seminar.html target=_blank>GALaC team seminar</a> </th>
+				<td align=right><em>Gif sur Yvette, France </em></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><em> Beyond the fractional Reed bound for triangle-free graphs</em></td>
+			</tr>
+			<tr>
+				
+			</tr>
+			</table>
+	
+	
+		 <li>
+			<table class=talk>
+			<tr>
+				<td class=date> December $2021$</td>
+				<th> Shandong University</a> </th>
+				<td align=right><em>Jinan, China </em></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><em> Coloring on outerplanar graphs</em></td>
+			</tr>
+			<tr>
+				
+			</tr>
+			</table>
+	
+		<li>
+			<table class=talk>
+			<tr>
+				<td class=date>$13$ May $2021$</td>
+				<th> Yangzhou University</a> </th>
+				<td align=right><em>Yangzhou, China</em></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><em>On DP-degree-coloring outerplanar graphs</em></td>
+			</tr>
+			<tr>
+				
+			</table>
+		
+	
+	
+		 <li>
+			<table class=talk>
+			<tr>
+				<td class=date>$26$ June $2020$</td>
+				<th> Journée Des Doctorants LRI/LIMSI</a> </th>
+				<td align=right><em>Orsay, France </em></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><em>Coloring problems in graphs.</em></td>
+			</tr>
+			<tr>
+				
+			</tr>
+			</table>
+	
+		
+		
+		<li>
+			<table class=talk>
+			<tr>
+				<td class=date>$2-5$ November $2017$</td>
+				<th>The 9th Cross-Strait Graph Theory and Combinatorics Conference</th>
+				<td align=right><em>Fuzhou, China </em></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><em>Strong list-chromatic index of subcubic graphs</em></td>
+			</tr>
+			<tr>
+				
+			</tr>
+			</table>
+		
+		
+		
+	</ul>
+</div>
+	
+	
+	
+		
+
+
+<div id='other' style='display:none'>
+<ul>
+	<li><a href=https://faculty.math.illinois.edu/~west/grammar.html>The Grammar According to West</a>
+	
+	<li><a href=https://faculty.math.illinois.edu/~west/meetlist.html>Links to Combinatorial Conferences</a>
+	
+<!--	<li><a href=photos/>Photos of my PhD defence</a>
+	 -->
+</ul>
+</div>
+
+</body>
+</html>
